@@ -13,7 +13,7 @@ function WebGLCheck({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     try {
       const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+      const ctx = canvas.getContext('webgl2') || canvas.getContext('webgl');
       setSupported(!!ctx);
     } catch {
       setSupported(false);

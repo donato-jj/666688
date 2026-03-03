@@ -8,7 +8,13 @@ import { useStore } from '@/store/useStore';
 const VoidMaterial = shaderMaterial(
   { uTime: 0, uIntensity: 0.5 },
   // vertex shader
-  `varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
+  `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+  `,
   // fragment shader
   `
   uniform float uTime;
