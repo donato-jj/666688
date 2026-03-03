@@ -1,9 +1,6 @@
 import { create } from 'zustand';
 import { AppState, BaseType, QualityLevel, ActiveTab, CameraPreset, MutationEvent } from '@/types';
-import { generateSequence, mutateBase, getComplement } from '@/lib/sequences';
-
-// Suppress unused import warning
-void getComplement;
+import { generateSequence, mutateBase } from '@/lib/sequences';
 
 const initialSequence = generateSequence(50);
 
